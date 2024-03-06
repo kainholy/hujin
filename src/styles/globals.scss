@@ -1,0 +1,32 @@
+@use "sass:math";
+
+// colors
+$wh: #FFFFFF;
+$bk: #1F2329;
+$blue: #0968E4;
+$red: #BA1C22;
+
+// font-family, font-weight
+$noto: "noto-sans-cjk-jp", sans-serif;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// font
+.mv-title {
+    font-size: clamp(6rem, 8.75vw,12.6rem);
+    font-weight: $bold;
+    font-family: $noto;
+    line-height: 1.5;
+    letter-spacing: 2%;
+    color: $bk;
+}
+.--wh {
+    color: $wh;
+}
+.--bk {
+    color: $bk;
+}
+.--blue {
+    color: $blue;
+}

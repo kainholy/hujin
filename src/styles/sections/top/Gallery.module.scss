@@ -1,0 +1,72 @@
+@use "../../globals.scss" as *;
+.container {
+    padding-top: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+.bgBigCircle {
+    position: absolute;
+    top: -55rem;
+    left: -40rem;
+    opacity: 0.2;
+    width: 160rem;
+    height: 160rem;
+    border-radius: 50%;
+    border: 4rem solid $red;
+}
+.bgSmallCircle {
+    position: absolute;
+    top: -55rem;
+    left: -40rem;
+    opacity: 0.2;
+    width: 160rem;
+    height: 160rem;
+    border-radius: 50%;
+    border: 4rem solid $red;
+    transform: scale(.9);
+}
+.content {
+    width: 144rem;
+    height: 121.7rem;
+    margin-left: calc((144rem - 100%) / -2);
+    position: relative;
+}
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.imgContainer {
+    position: absolute;
+    z-index: 3;
+}
+.firstImgContainer {
+    width: 14.8rem;
+    height: 14.8rem;
+    top: 0;
+    right: 55rem;
+}
+.secondImgContainer {
+    width: 44rem;
+    height: 31.7rem;
+    top: 2.4rem;
+    right: 8rem;
+}
+.thirdImgContainer {
+    width: 30.7rem;
+    height: 20.4rem;
+    top: 20.9rem;
+    left: 54.3rem;
+}
+.fourthImgContainer {
+    width: 96rem;
+    height: 60rem;
+    top: 48.9rem;
+    right: 0rem;
+}
+.fifthImgContainer {
+    width: 41rem;
+    height: 55.6rem;
+    top: 35.1rem;
+    left: 0rem;
+}

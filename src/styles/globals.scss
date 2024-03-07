@@ -13,13 +13,30 @@ $medium: 500;
 $bold: 700;
 
 // font
-.mv-title {
+.c-mv-title {
     font-size: clamp(6rem, 8.75vw,12.6rem);
     font-weight: $bold;
     font-family: $noto;
     line-height: 1.5;
     letter-spacing: 2%;
     color: $bk;
+}
+.c-message-text {
+    font-size: clamp(1.5rem, 1.25vw, 1.8rem);
+    font-weight: $medium;
+    font-family: $noto;
+    line-height: 1.5;
+    letter-spacing: 0.5%;
+    color: $bk;
+}
+.c-message-title {
+    font-size: clamp(3rem, 2.98vw, 4.3rem);
+    font-weight: $bold;
+    font-family: $noto;
+    line-height: 100%;
+    color: $bk;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
 }
 .--wh {
     color: $wh;

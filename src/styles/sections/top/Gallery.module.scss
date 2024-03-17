@@ -4,10 +4,10 @@
     position: relative;
     overflow: hidden;
 }
-.bgBigCircle {
+.bgBigCircle, .bgSmallCircle {
     position: absolute;
-    top: -55rem;
-    left: -40rem;
+    top: -40rem;
+    left: -35rem;
     opacity: 0.2;
     width: 160rem;
     height: 160rem;
@@ -15,14 +15,6 @@
     border: 4rem solid $red;
 }
 .bgSmallCircle {
-    position: absolute;
-    top: -55rem;
-    left: -40rem;
-    opacity: 0.2;
-    width: 160rem;
-    height: 160rem;
-    border-radius: 50%;
-    border: 4rem solid $red;
     transform: scale(.9);
 }
 .content {

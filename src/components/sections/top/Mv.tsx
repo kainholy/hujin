@@ -23,7 +23,7 @@ function Mv() {
       </div>
 
       <div className={styles.titleArea}>
-        <h1 className={styles.title + ' mv-title --bk'}>駆けろ<span className={styles.titleBlue + ' --blue'}>青</span>春、轟け躍動</h1>
+        <h1 className={styles.title + ' c-mv-title --bk'}>駆けろ<span className={styles.titleBlue + ' --blue'}>青</span>春、轟け躍動</h1>
       </div>
     </div>
   )

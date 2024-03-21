@@ -10,6 +10,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <link rel="icon" href="/favicon/favicon.svg" sizes="any" type="image/svg+xml"></link>
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png"></link>
+        <link rel="icon" href="/favicon/favicon.png"></link>
         <script dangerouslySetInnerHTML={{ __html: `
           (function(d) {
             var config = {

@@ -1,0 +1,15 @@
+.container {
+    padding-top: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgArea {
+    width: 100%;
+    aspect-ratio: 144 / 90;
+    background: url('/top/circle/1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

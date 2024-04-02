@@ -1,7 +1,7 @@
 import React from "react";
 import { MemList } from "../../../../types/member"; // 確認してください
 import Link from "next/link";
-import styles from "@/styles/sections/member/MemberList.module.scss";
+// import styles from "@/styles/sections/member/MemberList.module.scss";
 
 type Props = {
   members: MemList[]; // 複数のブログポストを受け取るように変更

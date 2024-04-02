@@ -5,6 +5,7 @@ $wh: #FFFFFF;
 $bk: #1F2329;
 $blue: #0968E4;
 $red: #BA1C22;
+$gray: rgba(31, 35, 41, .7);
 
 // font-family, font-weight
 $noto: "noto-sans-cjk-jp", sans-serif;
@@ -38,6 +39,62 @@ $bold: 700;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
 }
+.c-news-date {
+    font-size: 1rem;
+    font-weight: $medium;
+    font-family: $noto;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: $bk;
+}
+.c-news-category {
+    font-size: 1.2rem;
+    font-weight: $medium;
+    font-family: $noto;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: $bk;
+}
+.c-news-text {
+    font-size: clamp(1.4rem, calc(16 / 1440 * 100vw), 1.6rem);
+    font-weight: $regular;
+    font-family: $noto;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: $bk;
+}
+.c-sns-title {
+    font-size: clamp(2.4rem, calc(24 / 1440 * 100vw), 2.4rem);
+    font-weight: $bold;
+    font-family: $noto;
+    line-height: 1.2;
+    letter-spacing: 2%;
+    color: $bk;
+}
+.c-title2 {
+    font-size: clamp(3rem, calc(37 / 1440 * 100vw), 3.7rem);
+    font-weight: $bold;
+    font-family: $noto;
+    line-height: 1.2;
+    letter-spacing: 2%;
+    color: $bk;
+}
+.c-body1 {
+    font-size: 1.4rem;
+    font-weight: $bold;
+    font-family: $noto;
+    line-height: 1.5;
+    letter-spacing: 2%;
+
+}
+.c-button-text {
+    font-size: clamp(1.2rem, calc(16 / 1440 * 100vw), 1.6rem);
+    font-weight: $medium;
+    font-family: $noto;
+    letter-spacing: 2%;
+    color: $wh;
+
+}
 .--wh {
     color: $wh;
 }
@@ -46,4 +103,7 @@ $bold: 700;
 }
 .--blue {
     color: $blue;
+}
+.--gray {
+    color: $gray;
 }

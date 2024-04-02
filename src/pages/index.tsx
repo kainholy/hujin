@@ -2,8 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/layout/TopPage.module.scss";
 import Mv from "@/components/sections/top/Mv";
-import Gallary from "@/components/sections/top/Gallary";
+import Gallery from "@/components/sections/top/Gallery";
 import Message from "@/components/sections/top/Message";
+import Circle from "@/components/sections/top/Circle";
+import Enbu from "@/components/sections/top/Enbu";
+import News from "@/components/sections/top/News";
+import Sns from "@/components/sections/top/Sns";
 
 export default function Home() {
   return (
@@ -17,8 +21,12 @@ export default function Home() {
       <main>
         <div className={styles.container}>
           <Mv />
-          <Gallary />
+          <Gallery />
           <Message />
+          <Circle />
+          <Enbu />
+          <News />
+          <Sns />
         </div>
       </main>
 

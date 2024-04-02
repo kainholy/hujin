@@ -1,37 +1,60 @@
-import styles from "@/styles/Home.module.css";
+// import styles from "@/styles/news/NewsItem.module.css";
 import { client } from "../../../libs/client";
 import type { News } from "../../../types/news";
-import type { InferGetStaticPropsType, NextPage } from "next";
+import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import React from "react";
-import NewsItem from "@/components/sections/news/NewsItem"; // 新しく追加
+import NewsListItem from "@/components/sections/news/NewsListItem"; // 新しく追加
+import Hero from "@/components/hero/Hero"; // 新しく追加
+import styles from "@/styles/layout/TopPage.module.scss";
 
-//SSG
-export const getStaticProps = async () => {
-  const news = await client.get({ endpoint: "news" });
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await client.get({ endpoint: "news" });
   return {
     props: {
-      news: news.contents,
+      news: data.contents,
     },
   };
 };
 
-type Props = {
-  news: News[];
-};
-
-const News: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
-  news,
-}: Props) => {
+const NewsList: NextPage<Props> = ({ news }) => {
   return (
-    <div>
-      <ul>
-        {news.map((news) => (
-          <NewsItem key={news.id} news={news} /> // NewsItemコンポーネントを使用
-        ))}
-      </ul>
+    <div className={styles.container}>
+      <Hero />
+      <NewsListItem news={news} />
     </div>
   );
 };
 
-export default News;
+// //SSG
+// export const getStaticProps = async () => {
+//   const news = await client.get({ endpoint: "news" });
+
+//   return {
+//     props: {
+//       news: news.contents,
+//     },
+//   };
+// };
+
+// type Props = {
+//   news: News[];
+// };
+
+// const News: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+//   news,
+// }: Props) => {
+//   return (
+//     <div>
+//       <div>お知らせ</div>
+//       <ul>
+//         {news.map((news) => (
+//           <NewsListItem key={news.id} news={news} /> // NewsItemコンポーネントを使用
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+export default NewsList;

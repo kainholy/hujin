@@ -1,0 +1,28 @@
+@import "../../globals.scss";
+.container {
+    padding-top: 12rem;
+    padding-bottom: 16.4rem;
+    padding-left: min(5.5vw, 8rem);
+    padding-right: min(5.5vw, 8rem);
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.content {
+    padding: 8rem calc(120 / 1280 * 100%);
+    margin-top: 4.8rem;
+    border: solid 0.3rem $bk;
+    display: flex;
+    gap: calc(40 / 1280 * 100%);
+}
+.snsArea {
+    width: 50%;
+}
+.snsTitle {
+    margin-bottom: 2.4rem;
+    text-align: center;
+}

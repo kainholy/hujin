@@ -1,0 +1,48 @@
+@import "../../globals.scss";
+
+.container {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+}
+.textArea {
+    width: 62rem;
+    margin: 0 auto;
+}
+.title,
+.text {
+    text-align: center;
+}
+
+.text {
+    margin-top: 2.4rem;
+}
+.slider {
+    margin-top: 6.4rem;
+    overflow: hidden;
+}
+.sliderWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+.imgArea {
+    width: 70rem;
+    aspect-ratio: 70 / 47.25;
+}
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.buttonArea {
+    margin-top: 6.4rem;
+}
+.button {
+    display: block;
+    padding: 2rem 3rem;
+    background-color: $red;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 5rem;
+    border: solid 0.2rem $bk;  
+}

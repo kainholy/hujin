@@ -37,12 +37,8 @@ const MemberList = ({ members }: Props) => {
     <section className={styles.section}>
       <div className={styles.container}>
         {members.map((post, postIndex) => (
-          <div className={styles.card}>
-            <Link
-              href={`/member/${post.id}`}
-              key={postIndex}
-              className={styles.link}
-            >
+          <div className={styles.card} key={postIndex}>
+            <Link href={`/member/${post.id}`} className={styles.link}>
               <img
                 src={post.eyecatch.url}
                 alt=""

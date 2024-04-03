@@ -1,5 +1,7 @@
 import { MemList } from "../../../types/member";
 import { client } from "../../../libs/client";
+import Link from "next/link";
+import styles from "@/styles/sections/member/Member.module.scss";
 
 type Props = {
   member: MemList;
@@ -10,7 +12,7 @@ export const getStaticPaths = async () => {
 
   const paths = data.contents.map((content: any) => `/member/${content.id}`);
 
-  console.log(paths);
+  //   console.log(paths);
   return {
     paths,
     fallback: false,
@@ -30,51 +32,37 @@ export const getStaticProps = async (context: any) => {
 const MemberList = (member: Props) => {
   const body = member.member.body;
   return (
-    <section>
-      {body.map((member: any, index: number) => (
-        <div key={index}>
-          <h2>{member.title}</h2>
-          <img
-            src={member.img.url}
-            alt=""
-            style={{ width: "969px", height: "auto" }}
-          />
-          <h3>{member.name}</h3>
-          <p>{member.song}</p>
-          <p>{member.holiday}</p>
-          <p>{member.celebrity}</p>
-          <p>{member.comment}</p>
-        </div>
-      ))}
+    <section className={styles.section}>
+      <div className={styles.container}>
+        {body.map((member: any, index: number) => (
+          <div key={index} className={styles.card}>
+            <div className={styles.item}>
+              <img src={member.img.url} className={styles.img} alt="memimg" />
+              <div className={styles.content}>
+                <h1>{member.name}</h1>
+                <p>
+                  <span>好きなよさこいソング</span>
+                  <br />
+                  {member.song}
+                  <br />
+                  <span>休日の過ごし方</span>
+                  <br />
+                  {member.holiday}
+                  <br />
+                  <span>好きな有名人</span>
+                  <br />
+                  {member.celebrity}
+                  <br />
+                  <span>ひとこと</span>
+                  <br />
+                  {member.comment}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
 export default MemberList;
-
-// const MemberList = ({ members }: Props) => {
-//   return (
-//     <section>
-//       {members.map((post, postIndex) => (
-//         <div key={postIndex}>
-//           <h2>{post.title}</h2>
-//           {post.body.map((memberItem, memberIndex) => (
-//             <div key={memberIndex}>
-//               <img
-//                 src={memberItem.img.url}
-//                 alt=""
-//                 style={{ width: "969px", height: "auto" }}
-//               />
-//               <h3>{memberItem.name}</h3>
-//               <p>{memberItem.song}</p>
-//               <p>{memberItem.holiday}</p>
-//               <p>{memberItem.celebrity}</p>
-//               <p>{memberItem.comment}</p>
-//             </div>
-//           ))}
-//         </div>
-//       ))}
-//     </section>
-//   );
-// };
-
-// export default MemberList;

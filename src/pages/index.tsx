@@ -8,6 +8,7 @@ import Circle from "@/components/sections/top/Circle";
 import Enbu from "@/components/sections/top/Enbu";
 import News from "@/components/sections/top/News";
 import Sns from "@/components/sections/top/Sns";
+import We from "@/components/sections/top/We";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
           <Enbu />
           <News />
           <Sns />
+          <We />
         </div>
       </main>
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styles from '@/styles/sections/top/Circle.module.scss'
 import Image from 'next/image'
 import gsap from "gsap";
@@ -6,30 +6,33 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 function Circle() {
+    const containerRef = useRef(null)
+    const stickyRef = useRef(null)
+    const circleImgRef = useRef(null)
     
     useEffect(() => {
-        const pin = document.querySelector('#pin')
-        const circleImg = document.querySelector('#circleImg')
+        const sticky = stickyRef.current;
+        const container = containerRef.current;
+        const containerHeight = container.clientHeight;
+        const circleImg = circleImgRef.current;
 
-        const tl = gsap.timeline({
+        gsap.fromTo(circleImg, {clipPath: 'circle(25%)'}, {
+            clipPath: 'circle(100%)',
             scrollTrigger: {
-                trigger: pin,
-                start: 'center center',
-                end: '80% center',
-                scrub: 1,
+                trigger: sticky,
+                start: '10% top',
+                end: `+=${containerHeight}`,
+                scrub: true,
             }
-        });
-
-        gsap.set(circleImg, {borderRadius: 800, scale: 0.8});
-
-        tl
-        .to(circleImg, { borderRadius: 0, scale: 1 });
+        })
 
     })
 
   return (
-    <div className={styles.container} id='pin'>
-        <div className={styles.imgArea} id='circleImg'></div>
+    <div className={styles.container} ref={containerRef}>
+        <div className={styles.sticky} ref={stickyRef}>
+            <Image src='/top/circle/1.png' ref={circleImgRef} className={styles.imgArea} alt='' width={1440} height={900}></Image>
+        </div>
     </div>
   )
 }

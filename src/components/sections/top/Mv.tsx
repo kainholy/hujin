@@ -15,7 +15,8 @@ function Mv() {
             <Image 
               src="/top/mv/1.png"
               alt="Your Image"
-              fill
+              width={2000}
+              height={2000}
               className={styles.img}
             />
           </li>

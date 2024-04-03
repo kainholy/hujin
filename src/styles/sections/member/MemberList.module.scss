@@ -5,3 +5,48 @@
   padding: 0;
   font-family: $noto;
 }
+.container {
+  position: relative;
+  background-color: $wh;
+  width: 1080px;
+  margin: 40px auto 0;
+  padding: 80px;
+  border-radius: 20px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.link {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 24px 0;
+}
+
+.image {
+  width: 380px;
+  height: 220px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px $bk;
+}
+.content {
+}
+
+.title {
+  font-size: clamp(3.5rem, 3.25vw, 3.8rem);
+  font-weight: $medium;
+  line-height: 1.5;
+  letter-spacing: 0.5%;
+  color: $bk;
+}
+.tag {
+  font-size: clamp(1.5rem, 1.25vw, 1.8rem);
+  font-weight: $medium;
+  line-height: 1.5;
+  letter-spacing: 0.5%;
+  color: $bk;
+}

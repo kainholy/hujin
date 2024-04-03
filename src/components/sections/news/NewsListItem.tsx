@@ -9,6 +9,7 @@ type Props = {
 
 export const NewsListItem = (props: Props) => {
   const { news } = props;
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>

@@ -39,18 +39,12 @@ const MemberList = ({ members }: Props) => {
         {members.map((post, postIndex) => (
           <div className={styles.card} key={postIndex}>
             <Link href={`/member/${post.id}`} className={styles.link}>
-              <img
-                src={post.eyecatch.url}
-                alt=""
-                width={400}
-                height={400}
-                className={styles.image}
-              />
-              <div className={styles.content}>
-                <p className={styles.title}>{post.title}</p>
-                <p className={styles.tag}>{post.tag}</p>
-              </div>
+              <img src={post.eyecatch.url} alt="" className={styles.image} />
             </Link>
+            <div className={styles.content}>
+              <p className={styles.title}>{post.title}</p>
+              <p className={styles.tag}>{post.tag}</p>
+            </div>
           </div>
         ))}
       </div>

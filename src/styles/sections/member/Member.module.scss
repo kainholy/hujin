@@ -29,6 +29,7 @@
   height: 500px;
   border-radius: 10px;
   transition: all 0.5s;
+  object-fit: cover;
 }
 .content {
   height: 100px;
@@ -38,7 +39,7 @@
   position: absolute;
   bottom: 0px;
   background: rgb(27, 27, 27, 0.5);
-  color: white;
+  color: $wh;
   transition: all 0.5s;
   h1 {
     margin: 10px;

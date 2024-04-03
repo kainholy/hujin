@@ -34,29 +34,20 @@ type Props = {
 // };
 const MemberList = ({ members }: Props) => {
   return (
-    <section>
-      <ul>
+    <section className={styles.section}>
+      <div className={styles.container}>
         {members.map((post, postIndex) => (
-          <li className={styles.list}>
-            <Link
-              href={`/member/${post.id}`}
-              key={postIndex}
-              className={styles.link}
-            >
-              <img
-                src={post.eyecatch.url}
-                alt=""
-                width={400}
-                height={400}
-                className={styles.image}
-              />
-              <dl className={styles.content}>
-                <dt className={styles.title}>{post.title}</dt>
-              </dl>
+          <div className={styles.card} key={postIndex}>
+            <Link href={`/member/${post.id}`} className={styles.link}>
+              <img src={post.eyecatch.url} alt="" className={styles.image} />
             </Link>
-          </li>
+            <div className={styles.content}>
+              <p className={styles.title}>{post.title}</p>
+              <p className={styles.tag}>{post.tag}</p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };

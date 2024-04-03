@@ -77,7 +77,9 @@
     justify-content: center;
     object-fit: cover;
 
-    border-radius: 10px;
+    img {
+      border-radius: 10px;
+    }
   }
   .date {
     margin-top: 5px;

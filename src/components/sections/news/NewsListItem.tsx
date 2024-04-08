@@ -35,7 +35,9 @@ export const NewsListItem = (props: Props) => {
                       height={216}
                     />
                   </div>
-                  <p className={styles.date}>{news.createdAt}</p>
+                  <p className={styles.date}>
+                    {new Date(news.publishedAt).toLocaleDateString()}
+                  </p>
                   <p className={styles.tag}>{news.tag}</p>
                   <p className={styles.Article_title}>{news.title}</p>
                 </Link>

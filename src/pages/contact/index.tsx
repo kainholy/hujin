@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import Button from "react-bootstrap/Button";
+import styles from "@/styles/contact/Contact.module.scss";
+import Hero from "@/components/hero/Hero";
 
 function index() {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -28,27 +29,68 @@ function index() {
     });
   };
   return (
-    <div>
-      <h2>お問い合わせ</h2>
-      <form onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}>
-        <div>
-          <label htmlFor="name">お名前</label>
-          <input type="text" id="name" required ref={nameRef} />
+    <div className={styles.container}>
+      <Hero />
+      <h1 className={styles.title}>お問い合わせ</h1>
+
+      <form
+        className={styles.form}
+        onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}
+      >
+        <div className={styles.row}>
+          <div className={styles.label}>
+            <label htmlFor="name">お名前</label>
+            <span>必須</span>
+          </div>
+
+          <input
+            className={styles.input}
+            type="text"
+            id="name"
+            required
+            ref={nameRef}
+          />
         </div>
-        <div>
-          <label htmlFor="email">メールアドレス</label>
-          <input type="text" id="email" required ref={emailRef} />
+
+        <div className={styles.row}>
+          <div className={styles.label}>
+            <label className={styles.item} htmlFor="email">
+              メールアドレス
+            </label>
+            <span>必須</span>
+          </div>
+
+          <input
+            className={styles.input}
+            type="text"
+            id="email"
+            required
+            ref={emailRef}
+          />
         </div>
-        <div>
-          <label htmlFor="message">メッセージ</label>
+
+        <div className={styles.row}>
+          <div className={styles.label}>
+            <label className={styles.item} htmlFor="message">
+              メッセージ
+            </label>
+            <span>必須</span>
+          </div>
+
           <textarea
+            className={styles.textarea}
             name="message"
             id="message"
             required
             ref={messageRef}
           ></textarea>
         </div>
-        <button type="submit">送信</button>
+
+        <div className={styles.btn}>
+          <button className={styles.button} type="submit">
+            送信
+          </button>
+        </div>
       </form>
     </div>
   );

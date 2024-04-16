@@ -59,10 +59,11 @@
   margin-left: calc(50% - 190px);
   font-size: 2rem;
   font-weight: $bold;
-  color: $bk;
+  color: $wh;
   background: $red;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   padding: 20px;
+  border: solid 0.2rem $bk;
 }

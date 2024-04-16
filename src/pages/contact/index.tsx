@@ -1,11 +1,30 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "@/styles/contact/Contact.module.scss";
 import Hero from "@/components/hero/Hero";
+import { useRouter } from "next/router";
 
 function index() {
+  const router = useRouter();
+  const { query } = router;
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    // URLクエリからのデータでフォームの初期値を設定
+    if (nameRef.current)
+      nameRef.current.value = Array.isArray(query.name)
+        ? query.name[0]
+        : query.name || "";
+    if (emailRef.current)
+      emailRef.current.value = Array.isArray(query.email)
+        ? query.email[0]
+        : query.email || "";
+    if (messageRef.current)
+      messageRef.current.value = Array.isArray(query.message)
+        ? query.message[0]
+        : query.message || "";
+  }, [query]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -17,16 +36,23 @@ function index() {
       message: messageRef.current?.value,
     };
 
-    await fetch("api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain,",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.status === 200) console.log("送信しました");
+    // データをAPIに送信する代わりに確認ページに遷移
+    router.push({
+      pathname: "/contact/confirm",
+      query: data, // クエリパラメータとしてデータを渡す
     });
+
+    // await fetch("api/contact", {
+    //   method: "POST",
+    //   headers: {
+    //     Accept: "application/json, text/plain,",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(data),
+    // }).then((res) => {
+    //   if (res.status === 200) console.log("送信しました");
+    //   if (res.status === 200) alert("送信完了");
+    // });
   };
   return (
     <div className={styles.container}>
@@ -49,6 +75,7 @@ function index() {
             id="name"
             required
             ref={nameRef}
+            placeholder="風神太郎"
           />
         </div>
 
@@ -66,6 +93,7 @@ function index() {
             id="email"
             required
             ref={emailRef}
+            placeholder="fuujin@smaple.com"
           />
         </div>
 
@@ -83,6 +111,7 @@ function index() {
             id="message"
             required
             ref={messageRef}
+            placeholder="例: 依頼演舞の件について"
           ></textarea>
         </div>
 

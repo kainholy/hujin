@@ -18,31 +18,32 @@ export const NewsListItem = (props: Props) => {
           <h2 className={styles.title_text}>お知らせ</h2>
         </div>
         {/* 下の段 */}
-        <div className={styles.gridcontainer}>
+        <div className={styles.cardlist}>
           {news.map((news: any, index: number) => (
-            <div className={styles.card}>
-              <div
-                key={news.id}
-                className={styles.fadeUp}
-                style={{ animationDelay: `${index * 0.3}s` }} // 0.2秒ごとにアニメーションを開始
-              >
-                <Link href={`/news/${news.id}`} key={news.id}>
+            <Link href={`/news/${news.id}`}>
+              <div className={styles.card}>
+                <div
+                  key={news.id}
+                  className={styles.fadeUp}
+                  style={{ animationDelay: `${index * 0.3}s` }} // 0.3秒ごとにアニメーションを開始
+                >
                   <div className={styles.img}>
                     <img
                       src={news.eye_catch.url}
                       alt={news.title}
-                      width={384}
-                      height={216}
+                      className={styles.img}
                     />
                   </div>
-                  <p className={styles.date}>
-                    {new Date(news.publishedAt).toLocaleDateString()}
-                  </p>
-                  <p className={styles.tag}>{news.tag}</p>
-                  <p className={styles.Article_title}>{news.title}</p>
-                </Link>
+                  <div>
+                    <p className={styles.date}>
+                      {new Date(news.publishedAt).toLocaleDateString()}
+                    </p>
+                    <p className={styles.tag}>{news.tag}</p>
+                    <p className={styles.Article_title}>{news.title}</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

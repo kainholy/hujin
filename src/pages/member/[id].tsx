@@ -2,7 +2,7 @@ import { MemList } from "../../../types/member";
 import { client } from "../../../libs/client";
 import Link from "next/link";
 import styles from "@/styles/sections/member/Member.module.scss";
-import Hero from "@/components/hero/Hero";
+import Hero from "@/components/sections/hero/Hero";
 
 type Props = {
   member: MemList;

@@ -3,7 +3,7 @@ import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import { client } from "../../../libs/client";
 import MemberList from "@/components/sections/member/MemberList";
 import styles from "@/styles/layout/TopPage.module.scss";
-import Hero from "@/components/hero/Hero";
+import Hero from "@/components/sections/hero/Hero";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 

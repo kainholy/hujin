@@ -1,7 +1,7 @@
 import { News } from "../../../types/news";
 import { client } from "../../../libs/client";
 import styles from "@/styles/sections/news/NewsArticle.module.scss";
-import Hero from "@/components/hero/Hero";
+import Hero from "@/components/sections/hero/Hero";
 import Link from "next/link";
 
 type Props = {

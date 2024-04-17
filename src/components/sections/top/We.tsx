@@ -72,23 +72,23 @@ function We() {
                 <div className={styles.content} ref={contentRef}>
                     <ul className={styles.list} ref={listRef1}>
                         <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
+                        <li className={styles.item}><Image src='/top/we/2.png' className={styles.img} alt='' width={700} height={900}></Image></li>
+                        <li className={styles.item}><Image src='/top/we/3.png' className={styles.img} alt='' width={700} height={900}></Image></li>
                     </ul>
                     <ul className={styles.list} ref={listRef2}>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
+                        <li className={styles.item}><Image src='/top/we/4.png' className={styles.img} alt='' width={700} height={900}></Image></li>
+                        <li className={styles.item}><Image src='/top/we/5.png' className={styles.img} alt='' width={700} height={900}></Image></li>
+                        <li className={styles.item}><Image src='/top/we/6.png' className={styles.img} alt='' width={700} height={900}></Image></li>
                     </ul>
                     <ul className={styles.list} ref={listRef3}>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
+                        <li className={styles.item}><Image src='/top/we/7.png' className={styles.img} alt='' width={700} height={900}></Image></li>
+                        <li className={styles.item}><Image src='/top/we/8.png' className={styles.img} alt='' width={700} height={900}></Image></li>
+                        <li className={styles.item}><Image src='/top/we/9.png' className={styles.img} alt='' width={700} height={900}></Image></li>
                     </ul>
                     <ul className={styles.list} ref={listRef4}>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
+                        <li className={styles.item}><Image src='/top/we/10.png' className={styles.img} alt='' width={700} height={900}></Image></li>
+                        <li className={styles.item}><Image src='/top/we/11.png' className={styles.img} alt='' width={700} height={900}></Image></li>
+                        <li className={styles.item}><Image src='/top/we/12.png' className={styles.img} alt='' width={700} height={900}></Image></li>
                     </ul>
                 </div>
             </div>

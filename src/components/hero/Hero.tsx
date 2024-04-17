@@ -10,6 +10,14 @@ function Hero() {
     { src: "3.webp", styleClass: styles.img3 },
     { src: "4.webp", styleClass: styles.img4 },
     { src: "5.webp", styleClass: styles.img5 },
+    { src: "6.webp", styleClass: styles.img5 },
+    { src: "7.webp", styleClass: styles.img5 },
+    { src: "8.webp", styleClass: styles.img5 },
+    { src: "9.webp", styleClass: styles.img5 },
+    { src: "10.webp", styleClass: styles.img5 },
+    { src: "11.webp", styleClass: styles.img5 },
+    { src: "12.webp", styleClass: styles.img5 },
+    { src: "13.webp", styleClass: styles.img5 },
   ];
 
   const [currentImage, setCurrentImage] = useState({ src: "", styleClass: "" });

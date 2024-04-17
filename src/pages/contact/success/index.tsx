@@ -1,9 +1,13 @@
 import React from "react";
+import Success from "@/components/contact/Success";
+import Hero from "@/components/hero/Hero";
+import styles from "@/styles/layout/TopPage.module.scss";
 
 const index = () => {
   return (
-    <div>
-      <p>送信しました</p>
+    <div className={styles.container}>
+      <Hero />
+      <Success />
     </div>
   );
 };

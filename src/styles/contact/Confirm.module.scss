@@ -6,7 +6,7 @@
   margin-bottom: 40px;
   text-align: center;
   line-height: 1.5;
-
+  font-family: $noto;
   color: $bk;
 }
 
@@ -36,16 +36,28 @@
   display: flex;
   align-items: center;
   width: 250px;
+  font-weight: bold;
+  font-size: 16px;
 }
 .email {
   display: flex;
   align-items: center;
   width: 250px;
+  font-weight: bold;
+  font-size: 16px;
 }
 .message {
   display: flex;
   align-items: center;
   width: 250px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.recaptcha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 .btn {
   text-align: center;

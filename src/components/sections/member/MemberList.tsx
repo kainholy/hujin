@@ -49,9 +49,9 @@ const MemberList = ({ members }: Props) => {
         ))}
         <Link
           href="https://yosakoifuujin.tuzikaze.com/member.html"
-          className={styles.link}
+          className={styles.btn}
         >
-          <div className={styles.past}>16代目以降のメンバーはこちら</div>
+          <p className={styles.past}>16代目以降のメンバーはこちら</p>
         </Link>
       </div>
     </section>

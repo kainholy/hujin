@@ -2,6 +2,7 @@ import { MemList } from "../../../types/member";
 import { client } from "../../../libs/client";
 import Link from "next/link";
 import styles from "@/styles/sections/member/Member.module.scss";
+import Hero from "@/components/hero/Hero";
 
 type Props = {
   member: MemList;
@@ -33,6 +34,7 @@ const MemberList = (member: Props) => {
   const body = member.member.body;
   return (
     <section className={styles.section}>
+      <Hero />
       <div className={styles.container}>
         {body.map((member: any, index: number) => (
           <div key={index} className={styles.card}>

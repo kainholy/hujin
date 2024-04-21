@@ -9,6 +9,8 @@ import Enbu from "@/components/sections/top/Enbu";
 import News from "@/components/sections/top/News";
 import Sns from "@/components/sections/top/Sns";
 import We from "@/components/sections/top/We";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
+      <Header />
       <main>
         <div className={styles.container}>
           <Mv />
@@ -31,6 +34,7 @@ export default function Home() {
           <We />
         </div>
       </main>
+      <Footer />
 
     </>
   );

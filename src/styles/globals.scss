@@ -14,6 +14,46 @@ $medium: 500;
 $bold: 700;
 
 // font
+// header, footer
+.c-header-title {
+    font-size: 1.4rem;
+    font-weight: $bold;
+    font-family: $noto;
+    color: $bk;
+}
+.c-header-link {
+    font-size: 2rem;
+    font-weight: $bold;
+    font-family: $noto;
+    color: $bk;
+    transition: all .3s;
+    &:hover {
+        color: $red;
+    }
+}
+.c-footer-title {
+    font-size: 2rem;
+    font-weight: $bold;
+    font-family: $noto;
+    color: $bk;
+}
+.c-footer-link {
+    font-size: 1.5rem;
+    font-weight: $bold;
+    font-family: $noto;
+    color: $bk;
+    transition: all .3s;
+    &:hover {
+        color: $red;
+    }
+}
+.c-footer-copy {
+    font-size: 1rem;
+    font-weight: $medium;
+    font-family: $noto;
+    color: $bk;
+}
+// 各ページ
 .c-mv-title {
     font-size: clamp(6rem, 8.75vw,12.6rem);
     font-weight: $bold;
@@ -71,6 +111,9 @@ $bold: 700;
     letter-spacing: 2%;
     color: $bk;
 }
+
+
+// components
 .c-title2 {
     font-size: clamp(3rem, calc(37 / 1440 * 100vw), 3.7rem);
     font-weight: $bold;
@@ -93,7 +136,6 @@ $bold: 700;
     font-family: $noto;
     letter-spacing: 2%;
     color: $wh;
-
 }
 .--wh {
     color: $wh;

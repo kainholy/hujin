@@ -1,15 +1,15 @@
 import React from "react";
-import styles from "@/styles/layout/TopPage.module.scss";
 import Hero from "@/components/sections/hero/Hero";
-import Contact from "@/components/sections/contact/Contact";
+import Confirm from "@/components/sections/contact/Confirm";
+import styles from "@/styles/layout/TopPage.module.scss";
 
-function index() {
+const index = () => {
   return (
     <div className={styles.container}>
       <Hero />
-      <Contact />
+      <Confirm />
     </div>
   );
-}
+};
 
 export default index;

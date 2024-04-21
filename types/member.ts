@@ -25,6 +25,7 @@ export type MemList = {
   revisedAt: string;
   title: string;
   eyecatch: Image;
+  comment: string;
   tag: string;
   body: Member[];
 };

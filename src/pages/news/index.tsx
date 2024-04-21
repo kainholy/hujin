@@ -4,7 +4,7 @@ import type { News } from "../../../types/news";
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import React from "react";
 import NewsListItem from "@/components/sections/news/NewsListItem"; // 新しく追加
-import Hero from "@/components/hero/Hero"; // 新しく追加
+import Hero from "@/components/sections/hero/Hero"; // 新しく追加
 import styles from "@/styles/layout/TopPage.module.scss";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;

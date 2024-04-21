@@ -40,73 +40,158 @@ function We() {
       scrub: 0,
     };
 
-
-        const bgScrollTrigger = {
-            trigger: container,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 0,
-        }
-        const textScrollTrigger = {
-            trigger: container,
-            start: '30% 100%',
-            end: '45% 50%',
-            scrub: 0,
-        }
-
-        gsap.to([list1, list3], {
-            y: 100,
-            scrollTrigger: bgScrollTrigger
-        })
-        gsap.to([list2, list4], {
-            y: -100,
-            scrollTrigger: bgScrollTrigger
-        })
-        gsap.to(span1, {
-            x: -50,
-            scrollTrigger: textScrollTrigger
-        })
-        gsap.to(span2, {
-            x: 100,
-            scrollTrigger: textScrollTrigger
-        })
-    })
-    return (
-        <section className={styles.we} id='we'>
-            <div className={styles.container}>
-                <div className={styles.bg}>
-                </div>
-                <div className={styles.textArea}>
-                    <p className={styles.text}>
-                        <span className={styles.span} ref={spanRef1}>あふれんばかりの</span>
-                        <span className={styles.span2} ref={spanRef2}>風神魂</span>
-                    </p>
-                </div>
-                <div className={styles.content} ref={contentRef}>
-                    <ul className={styles.list} ref={listRef1}>
-                        <li className={styles.item}><Image src='/top/we/1.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/2.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/3.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                    </ul>
-                    <ul className={styles.list} ref={listRef2}>
-                        <li className={styles.item}><Image src='/top/we/4.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/5.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/6.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                    </ul>
-                    <ul className={styles.list} ref={listRef3}>
-                        <li className={styles.item}><Image src='/top/we/7.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/8.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/9.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                    </ul>
-                    <ul className={styles.list} ref={listRef4}>
-                        <li className={styles.item}><Image src='/top/we/10.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/11.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                        <li className={styles.item}><Image src='/top/we/12.png' className={styles.img} alt='' width={700} height={900}></Image></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-  )
+    gsap.to([list1, list3], {
+      y: 100,
+      scrollTrigger: bgScrollTrigger,
+    });
+    gsap.to([list2, list4], {
+      y: -100,
+      scrollTrigger: bgScrollTrigger,
+    });
+    gsap.to(span1, {
+      x: -50,
+      scrollTrigger: textScrollTrigger,
+    });
+    gsap.to(span2, {
+      x: 100,
+      scrollTrigger: textScrollTrigger,
+    });
+  });
+  return (
+    <section className={styles.we} id="we">
+      <div className={styles.container}>
+        <div className={styles.bg}></div>
+        <div className={styles.textArea}>
+          <p className={styles.text}>
+            <span className={styles.span} ref={spanRef1}>
+              あふれんばかりの
+            </span>
+            <span className={styles.span2} ref={spanRef2}>
+              風神魂
+            </span>
+          </p>
+        </div>
+        <div className={styles.content} ref={contentRef}>
+          <ul className={styles.list} ref={listRef1}>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/1.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/2.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/3.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+          </ul>
+          <ul className={styles.list} ref={listRef2}>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/4.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/5.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/6.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+          </ul>
+          <ul className={styles.list} ref={listRef3}>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/7.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/8.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/9.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+          </ul>
+          <ul className={styles.list} ref={listRef4}>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/10.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/11.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+            <li className={styles.item}>
+              <Image
+                src="/top/we/12.png"
+                className={styles.img}
+                alt=""
+                width={700}
+                height={900}
+              ></Image>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default We;

@@ -6,13 +6,25 @@ import Gallery from "@/components/sections/top/Gallery";
 import Message from "@/components/sections/top/Message";
 import Circle from "@/components/sections/top/Circle";
 import Enbu from "@/components/sections/top/Enbu";
-import News from "@/components/sections/top/News";
+import TopNews from "@/components/sections/top/News";
 import Sns from "@/components/sections/top/Sns";
 import We from "@/components/sections/top/We";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+import { client } from "../../libs/client";
 
-export default function Home() {
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await client.get({ endpoint: "news" });
+  return {
+    props: {
+      news: data.contents,
+    },
+  };
+};
+const Home: NextPage<Props> = ({ news }) => {
   return (
     <>
       <Head>
@@ -29,13 +41,13 @@ export default function Home() {
           <Message />
           <Circle />
           <Enbu />
-          <News />
+          <TopNews news={news} />
           <Sns />
           <We />
         </div>
       </main>
       <Footer />
-
     </>
   );
-}
+};
+export default Home;

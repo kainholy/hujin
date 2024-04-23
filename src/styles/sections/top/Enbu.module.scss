@@ -3,11 +3,47 @@
 .container {
     padding-top: 12rem;
     padding-bottom: 12rem;
+    position: relative;
+    @include sp {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+}
+.leftCircle,
+.leftCircleSmall {
+    position: absolute;
+    bottom: 20%;
+    right: -20%;
+    width: 80rem;
+    height: 80rem;
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: 1;
+    border: 3rem solid $red;
+    z-index: 1;
+    @include sp {
+        width: 50rem;
+        height: 50rem;
+        border: 3rem solid $red;
+        top: -40%;
+        right: -50%;
+    }
+}
+.leftCircleSmall {
+    border: 2.5rem solid $red;
+    scale: .85;
 }
 .textArea {
     width: 62rem;
     margin: 0 auto;
     padding-bottom: 6.4rem;
+    z-index: 2;
+    @include sp {
+        width: 100%;
+        padding-bottom: 4rem;
+        padding-left: min(calc(20 / 375 * 100vw), 2rem);
+        padding-right: min(calc(20 / 375 * 100vw), 2rem);
+    }
 }
 .title,
 .text {
@@ -20,11 +56,18 @@
 .slider {
     margin-top: 6.4rem;
     overflow: hidden;
+    z-index: 2;
+    @include sp {
+        margin-top: 2.4rem;
+    }
 }
 .sliderWrapper {
     display: flex;
     justify-content: center;
     gap: 4rem;
+    @include sp {
+        gap: 2rem;
+    }
 }
 .imgArea {
     width: 70rem;
@@ -37,6 +80,9 @@
 }
 .buttonArea {
     margin-top: 6.4rem;
+    @include sp {
+        margin-top: 4rem;
+    }
 }
 .button {
     display: block;
@@ -45,5 +91,8 @@
     width: fit-content;
     margin: 0 auto;
     border-radius: 5rem;
-    border: solid 0.2rem $bk;  
+    border: solid 0.2rem $bk;
+    @include sp {
+        padding: 1.4rem 2rem;
+    }
 }

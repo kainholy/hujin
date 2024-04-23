@@ -29,23 +29,27 @@ function Mv() {
     const windowHeight = window.innerHeight
     const initialTop = windowHeight - titleHeight - 40
 
-    gsap.set(title, {top: initialTop})
-
-    gsap.to(title, {
-      scrollTrigger: {
-        trigger: container,
-        start: 'top bottom',
-        end: 'bottom bottom',
-        scrub: 0,
-        onUpdate: (self) => {
-          const top = initialTop + self.scroll.v
-          if (self.scroll.v >= 253) {
-            gsap.set(title, {top: initialTop + 253})
-          } else {
-            gsap.set(title, {top: top})
+    const mm = gsap.matchMedia()
+    
+    mm.add('(min-width: 769px)', () => {
+      gsap.set(title, {top: initialTop})
+  
+      gsap.to(title, {
+        scrollTrigger: {
+          trigger: container,
+          start: 'top bottom',
+          end: 'bottom bottom',
+          scrub: 0,
+          onUpdate: (self) => {
+            const top = initialTop + self.scroll.v
+            if (self.scroll.v >= 253) {
+              gsap.set(title, {top: initialTop + 253})
+            } else {
+              gsap.set(title, {top: top})
+            }
           }
         }
-      }
+      })
     })
   })
 
@@ -89,7 +93,10 @@ function Mv() {
       </Swiper>
 
       <div className={styles.titleArea} ref={titleRef}>
-        <h1 className={styles.title + ' c-mv-title --bk'}>駆けろ<span className={styles.titleBlue + ' --blue'}>青</span>春、轟け躍動</h1>
+        <h1 className={styles.title + ' c-mv-title --bk'}>
+          駆けろ<span className={styles.titleBlue + ' --blue'}>青</span>春、<br className='sp' />
+          轟け躍動
+        </h1>
       </div>
     </section>
   )

@@ -25,6 +25,9 @@ $bold: 700;
         .slider-img {
             transition-delay: 0s;
             transform: scale(1.05);
+            @include sp {
+                transform: scale(1.05) translateX(-50%);
+            }
         }
     }
     .swiper-slide-prev,
@@ -32,7 +35,11 @@ $bold: 700;
         opacity: 0.5; // 前のスライドと次のスライドの透明度を下げる
     }
     .slider-img {
+        transform-origin: center;
         transition: transform 10s;
+        @include sp {
+            transform: translateX(-50%);
+        }
     }
 }
 #enbu .swiper {
@@ -74,12 +81,27 @@ $bold: 700;
                 scale: 1.1;
             }
         }
+        @include sp {
+            scale: .7;
+        }
     }
     .swiper-button-prev {
         left: 20.5%;
+        @include sp {
+            left: 4%;
+        }
     }
     .swiper-button-next {
         right: 20.5%;
+        @include sp {
+            right: 4%;
+        }
+    }
+}
+#sns {
+    iframe {
+        width: 100%;
+        height: 40rem;
     }
 }
 
@@ -90,6 +112,9 @@ $bold: 700;
     font-weight: $bold;
     font-family: $noto;
     color: $bk;
+    @include sp {
+        font-size: 1.3rem;
+    }
 }
 .c-header-link {
     font-size: 2rem;
@@ -106,6 +131,9 @@ $bold: 700;
     font-weight: $bold;
     font-family: $noto;
     color: $bk;
+    @include sp {
+        font-size: 1.6rem;
+    }
 }
 .c-footer-link {
     font-size: 1.5rem;
@@ -115,6 +143,9 @@ $bold: 700;
     transition: all .3s;
     &:hover {
         color: $red;
+    }
+    @include sp {
+        font-size: 1.2rem;
     }
 }
 .c-footer-copy {
@@ -131,6 +162,9 @@ $bold: 700;
     line-height: 1.5;
     letter-spacing: 2%;
     color: $bk;
+    @include sp {
+        font-size: clamp(5rem, calc(60 / 375 * 100vw), 9rem);
+    }
 }
 .c-message-text {
     font-size: clamp(1.5rem, 1.25vw, 1.8rem);
@@ -139,6 +173,9 @@ $bold: 700;
     line-height: 1.5;
     letter-spacing: 0.5%;
     color: $bk;
+    @include sp {
+        font-size: clamp(1.2rem, calc(14 / 375 * 100vw), 1.7rem);
+    }
 }
 .c-message-title {
     font-size: clamp(3rem, 2.98vw, 4.3rem);
@@ -148,6 +185,9 @@ $bold: 700;
     color: $bk;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
+    @include sp {
+        font-size: clamp(2.5rem, calc(30 / 375 * 100vw), 4.3rem);
+    }
 }
 .c-news-date {
     font-size: 1rem;
@@ -180,6 +220,9 @@ $bold: 700;
     line-height: 1.2;
     letter-spacing: 2%;
     color: $bk;
+    @include sp {
+        font-size: clamp(1.8rem, calc(18 / 375 * 100vw), 2rem);
+    }
 }
 
 
@@ -191,13 +234,19 @@ $bold: 700;
     line-height: 1.2;
     letter-spacing: 2%;
     color: $bk;
+    @include sp {
+        font-size: clamp(2.5rem, calc(25 / 375 * 100vw), 3rem);
+    }
 }
 .c-body1 {
     font-size: 1.4rem;
-    font-weight: $bold;
+    font-weight: $medium;
     font-family: $noto;
     line-height: 1.5;
     letter-spacing: 2%;
+    @include sp {
+        font-size: 1.2rem;
+    }
 
 }
 .c-button-text {

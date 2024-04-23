@@ -12,8 +12,8 @@
     position: absolute;
     bottom: -100%;
     right: -10%;
-    width: 90rem;
-    height: 90rem;
+    width: 110rem;
+    height: 110rem;
     border-radius: 50%;
     opacity: 0.2;
     z-index: 1;
@@ -31,12 +31,20 @@
     max-width: 144rem;
     margin: 0 auto;
     z-index: 2;
+    @include sp {
+        padding-top: 6.4rem;
+    }
 }
 .inner {
     display: flex;
     justify-content: space-between;
     padding-bottom: 12rem;
     border-bottom: 0.2rem solid $bk;
+    @include sp {
+        flex-direction: column;
+        gap: 2.4rem;
+        padding-bottom: 4rem;
+    }
 }
 .titleArea {
 
@@ -44,6 +52,9 @@
 .logo {
     width: 8rem;
     aspect-ratio: 80 / 76.57;
+    @include sp {
+        width: 6rem;
+    }
 }
 .img {
     width: 100%;
@@ -52,16 +63,29 @@
 }
 .title {
     margin-top: 2.8rem;
+    @include sp {
+        margin-top: 2rem;
+    }
 }
 .nav {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+    @include sp {
+        gap: 1.2rem;
+    }
 }
 .item {
     text-align: right;
+    @include sp {
+        text-align: left;
+    }
 }
 .copyArea {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    @include sp {
+        padding-top: 3.2rem;
+        padding-bottom: 3.2rem;
+    }
 }

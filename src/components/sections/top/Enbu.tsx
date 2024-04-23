@@ -31,6 +31,10 @@ function Enbu() {
   return (
     <section className={styles.enbu} id='enbu'>
       <div className={styles.container}>
+        <div className={styles.leftCircle}>
+        </div>
+        <div className={styles.leftCircleSmall}>
+        </div>
         <div className={styles.textArea}>
             <h2 className={styles.title + ' c-title2 --bk'}>演舞紹介</h2>
             <p className={styles.text + ' c-body1 --bk'}>よさこいの演舞とは、代ごとに決めたテーマに基づいてオリジナル曲や振付を創作し、自ら衣装を作成するパフォーマンスです。私たちのチームは、創造力とチームワークを活かし、独自の個性を表現しています。</p>

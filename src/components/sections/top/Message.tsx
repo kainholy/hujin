@@ -4,7 +4,11 @@ import styles from '@/styles/sections/top/Message.module.scss'
 
 function Message() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container} id='message'>
+      <div className={styles.leftCircle}>
+      </div>
+      <div className={styles.leftCircleSmall}>
+      </div>
       <div className={styles.contentArea}>
         <div className={styles.textArea}>
             <p className={styles.text + ' c-message-text'}>
@@ -19,7 +23,7 @@ function Message() {
                 『誰かを楽しませたい』<br />
                 それが風神の信念です。<br /><br />
 
-                それが逆風にも負けず、自由に笑顔を広げる、<br />
+                それが逆風にも負けず、<br className='sp'/>自由に笑顔を広げる、<br />
                 貴重な存在になるはずだから。<br /><br />
 
                 明るい未来を作るために、<br />
@@ -36,7 +40,7 @@ function Message() {
       <div className={styles.imgArea}>
         <Image className={styles.img} src="/top/message/1.png" alt="message" width={500} height={500} />
       </div>
-    </div>
+    </section>
   )
 }
 

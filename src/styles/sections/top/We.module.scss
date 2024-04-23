@@ -21,6 +21,8 @@
 .item {
     width: 35rem;
     height: 44rem;
+    border-radius: .8rem;
+    overflow: hidden;
 }
 .img {
     width: 100%;
@@ -46,7 +48,7 @@
     text-align: center;
 }
 .text {
-    font-size: 15rem;
+    font-size: clamp(9rem, calc(150 / 1440 * 100vw), 15rem);
     font-weight: 700;
     color: #fff;
     text-align: center;
@@ -56,7 +58,14 @@
     flex-direction: column;
     align-items: center;
     gap: 4rem;
+    @include sp {
+        font-size: clamp(4.5rem, calc(45 / 375 * 100vw), 7rem);
+        gap: 2rem;
+    }
 }
 .span2 {
-    font-size: 17rem;
+    font-size: clamp(10rem, calc(170 / 1440 * 100vw), 17rem);
+    @include sp {
+        font-size: clamp(6rem, calc(60 / 375 * 100vw), 8rem);
+    }
 }

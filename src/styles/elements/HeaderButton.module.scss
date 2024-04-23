@@ -18,9 +18,18 @@
             background: $red;
         }
     }
+    @include sp {
+        width: 8rem;
+        height: 3rem;
+        gap: .6rem;
+    }
 }
 .line {
     width: 3.7rem;
     height: 0.2rem;
     background: $wh;
+    @include sp {
+        width: 2.5rem;
+        height: 0.15rem;
+    }
 }

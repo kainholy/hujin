@@ -41,7 +41,7 @@ function Message() {
         y: 0,
         scrollTrigger: {
           trigger: line,
-          start: 'top 95%',
+          start: 'top 92%',
           end: '+='+line1Height,
           scrub: true
         }

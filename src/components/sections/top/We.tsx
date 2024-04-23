@@ -71,7 +71,6 @@ function We() {
         start: "40% 100%",
         end: "50% 50%",
         scrub: 0,
-        markers: true,
       };
 
       gsap.to(span1, {

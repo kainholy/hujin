@@ -100,7 +100,7 @@ $bold: 700;
 }
 #sns {
     iframe {
-        width: 100%;
+        width: 100% !important;
         height: 40rem;
     }
 }
@@ -196,6 +196,9 @@ $bold: 700;
     line-height: 100%;
     letter-spacing: 2%;
     color: $bk;
+    @include sp {
+        font-size: 0.9rem;
+    }
 }
 .c-news-category {
     font-size: 1.2rem;
@@ -204,6 +207,9 @@ $bold: 700;
     line-height: 100%;
     letter-spacing: 2%;
     color: $bk;
+    @include sp {
+        font-size: 1.1rem;
+    }
 }
 .c-news-text {
     font-size: clamp(1.4rem, calc(16 / 1440 * 100vw), 1.6rem);
@@ -212,6 +218,9 @@ $bold: 700;
     line-height: 100%;
     letter-spacing: 2%;
     color: $bk;
+    @include sp {
+        font-size: clamp(1.2rem, calc(12 / 375 * 100vw), 1.5rem);
+    }
 }
 .c-sns-title {
     font-size: clamp(2.4rem, calc(24 / 1440 * 100vw), 2.4rem);

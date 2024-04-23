@@ -4,6 +4,7 @@
     padding-top: 12rem;
     padding-bottom: 12rem;
     position: relative;
+    overflow: hidden;
     @include sp {
         padding-top: 8rem;
         padding-bottom: 8rem;
@@ -22,15 +23,15 @@
     border: 3rem solid $red;
     z-index: 1;
     @include sp {
-        width: 50rem;
-        height: 50rem;
-        border: 3rem solid $red;
-        top: -40%;
+        width: 40rem;
+        height: 40rem;
+        border: 2rem solid $red;
+        bottom: 60%;
         right: -50%;
     }
 }
 .leftCircleSmall {
-    border: 2.5rem solid $red;
+    border: 1.5rem solid $red;
     scale: .85;
 }
 .textArea {

@@ -31,34 +31,56 @@
 .imgContainer {
     position: absolute;
     z-index: 3;
+    border-radius: .4rem;
+    overflow: hidden;
 }
 .firstImgContainer {
     width: 14.8rem;
     height: 14.8rem;
     top: 0;
     right: 55rem;
+    background: url('/top/gallery/1.webp');
+    background-size: 110%;
+    background-position-x: center;
+    background-repeat: no-repeat
 }
 .secondImgContainer {
     width: 44rem;
     height: 31.7rem;
     top: 2.4rem;
     right: 8rem;
+    background: url('/top/gallery/2.webp');
+    background-size: 110%;
+    background-position-x: center;
+    background-repeat: no-repeat
 }
 .thirdImgContainer {
     width: 30.7rem;
     height: 20.4rem;
     top: 20.9rem;
     left: 54.3rem;
+    background: url('/top/gallery/3.webp');
+    background-size: 110%;
+    background-position-x: center;
+    background-repeat: no-repeat
 }
 .fourthImgContainer {
     width: 96rem;
     height: 60rem;
     top: 48.9rem;
     right: 0rem;
+    background: url('/top/gallery/4.webp');
+    background-size: 110%;
+    background-position-x: center;
+    background-repeat: no-repeat
 }
 .fifthImgContainer {
     width: 41rem;
     height: 55.6rem;
     top: 35.1rem;
     left: 0rem;
+    background: url('/top/gallery/5.webp');
+    background-size: 110%;
+    background-position-x: center;
+    background-repeat: no-repeat
 }

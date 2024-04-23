@@ -59,6 +59,18 @@
         left: 1.5rem;
     }
 }
+
+.line {
+    display: inline-block;
+    background: url('/top/message/text-bg.png');
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 .title {
     display: inline-flex;
 }

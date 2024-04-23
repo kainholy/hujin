@@ -1,4 +1,5 @@
 @use "sass:math";
+@import './mixin.scss';
 
 // colors
 $wh: #FFFFFF;
@@ -12,6 +13,75 @@ $noto: "noto-sans-cjk-jp", sans-serif;
 $regular: 400;
 $medium: 500;
 $bold: 700;
+
+// swiper
+#mv .swiper {
+    .swiper-slide {
+        opacity: 0.5; // 非アクティブなスライドの透明度を下げる
+        transition: opacity 1s; // スライドの切り替わりにフェード効果を適用する
+    }
+    .swiper-slide-active {
+        opacity: 1; // アクティブなスライドの透明度を上げる
+        .slider-img {
+            transition-delay: 0s;
+            transform: scale(1.05);
+        }
+    }
+    .swiper-slide-prev,
+    .swiper-slide-next {
+        opacity: 0.5; // 前のスライドと次のスライドの透明度を下げる
+    }
+    .slider-img {
+        transition: transform 10s;
+    }
+}
+#enbu .swiper {
+    padding-bottom: 4rem;
+    .swiper-pagination {
+        position: absolute;
+        z-index: 1;
+        bottom: 0rem;
+        height: max-content;
+        margin: auto;
+    }
+    .swiper-pagination-bullet {
+        &-active {
+            background-color: $bk;
+        }
+    }
+
+    .swiper-slide {
+        transition: scale 1.5s; // スライドの切り替わりにフェード効果を適用する
+        scale: .8; 
+    }
+    .swiper-slide-active {
+        scale: 1;
+    }
+    .swiper-slide-prev,
+    .swiper-slide-next {
+        scale: .8; // 前のスライドと次のスライドの透明度を下げる
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $bk;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+        transition: all .4s;
+        @include pc {
+            &:hover {
+                color: $red;
+                scale: 1.1;
+            }
+        }
+    }
+    .swiper-button-prev {
+        left: 20.5%;
+    }
+    .swiper-button-next {
+        right: 20.5%;
+    }
+}
 
 // font
 // header, footer
@@ -55,7 +125,7 @@ $bold: 700;
 }
 // 各ページ
 .c-mv-title {
-    font-size: clamp(6rem, 8.75vw,12.6rem);
+    font-size: clamp(6rem, 9.72vw,14rem);
     font-weight: $bold;
     font-family: $noto;
     line-height: 1.5;

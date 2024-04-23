@@ -45,6 +45,13 @@
     opacity: 0.2;
     z-index: 1;
     border: 5rem solid $red;
+    @include sp {
+        width: 50rem;
+        height: 50rem;
+        border: 3rem solid $red;
+        top: -40%;
+        left: -50%;
+    }
 }
 .leftCircleSmall {
     border: 4rem solid $red;
@@ -61,6 +68,13 @@
     opacity: 0.2;
     z-index: 1;
     border: 5rem solid $blue;
+    @include sp {
+        width: 40rem;
+        height: 40rem;
+        border: 3rem solid $blue;
+        bottom: -35%;
+        right: -40%;
+    }
 }
 .rightCircleSmall {
     border: 4.5rem solid $blue;

@@ -20,7 +20,8 @@
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18",
     "react-twitter-embed": "^4.0.4",
-    "sass": "^1.71.1"
+    "sass": "^1.71.1",
+    "swiper": "^11.1.1"
   },
   "devDependencies": {
     "@types/dompurify": "^3.0.5",

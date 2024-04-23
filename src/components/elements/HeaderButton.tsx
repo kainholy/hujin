@@ -16,14 +16,28 @@ function HeaderButton({ active, setActive }: { active: boolean, setActive: (acti
         const button = buttonRef.current
         const buttonLine1 = buttonLine1Ref.current
         const buttonLine2 = buttonLine2Ref.current
-        button.addEventListener('click', () => {
-            if ( !active ) {
-                gsap.to(buttonLine1, {duration: 0.3, y: 6, rotate: -15, ease: 'power2.inOut'})
-                gsap.to(buttonLine2, {duration: 0.3, y: -6, rotate: 15, ease: 'power2.inOut'})
-            } else {
-                gsap.to(buttonLine1, {duration: 0.3, y: 0, rotate: 0, ease: 'power2.inOut'})
-                gsap.to(buttonLine2, {duration: 0.3, y: 0, rotate: 0, ease: 'power2.inOut'})
-            }
+        const mm = gsap.matchMedia()
+        mm.add('(min-width: 769px)', () => {
+            button.addEventListener('click', () => {
+                if ( !active ) {
+                    gsap.to(buttonLine1, {duration: 0.3, y: 6, rotate: -15, ease: 'power2.inOut'})
+                    gsap.to(buttonLine2, {duration: 0.3, y: -6, rotate: 15, ease: 'power2.inOut'})
+                } else {
+                    gsap.to(buttonLine1, {duration: 0.3, y: 0, rotate: 0, ease: 'power2.inOut'})
+                    gsap.to(buttonLine2, {duration: 0.3, y: 0, rotate: 0, ease: 'power2.inOut'})
+                }
+            })
+        })
+        mm.add('(max-width: 768px)', () => {
+            button.addEventListener('click', () => {
+                if ( !active ) {
+                    gsap.to(buttonLine1, {duration: 0.3, y: 3.7, rotate: -15, ease: 'power2.inOut'})
+                    gsap.to(buttonLine2, {duration: 0.3, y: -3.7, rotate: 15, ease: 'power2.inOut'})
+                } else {
+                    gsap.to(buttonLine1, {duration: 0.3, y: 0, rotate: 0, ease: 'power2.inOut'})
+                    gsap.to(buttonLine2, {duration: 0.3, y: 0, rotate: 0, ease: 'power2.inOut'})
+                }
+            })
         })
     })
   return (

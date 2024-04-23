@@ -22,24 +22,16 @@ function We() {
     const list4 = listRef4.current;
     const span1 = spanRef1.current;
     const span2 = spanRef2.current;
+    const mm = gsap.matchMedia()
+    
     gsap.set([list1, list3], { y: -100 });
     gsap.set([list2, list4], { y: 100 });
-    gsap.set(span1, { x: 100 });
-    gsap.set(span2, { x: -100 });
-
     const bgScrollTrigger = {
       trigger: container,
       start: "top bottom",
       end: "bottom top",
       scrub: 0,
     };
-    const textScrollTrigger = {
-      trigger: container,
-      start: "30% 100%",
-      end: "45% 50%",
-      scrub: 0,
-    };
-
     gsap.to([list1, list3], {
       y: 100,
       scrollTrigger: bgScrollTrigger,
@@ -48,13 +40,48 @@ function We() {
       y: -100,
       scrollTrigger: bgScrollTrigger,
     });
-    gsap.to(span1, {
-      x: -50,
-      scrollTrigger: textScrollTrigger,
+
+    mm.add('(min-width: 769px)', () => {
+      gsap.set(span1, { x: 100 });
+      gsap.set(span2, { x: -100 });
+
+      const textScrollTrigger = {
+        trigger: container,
+        start: "30% 100%",
+        end: "45% 50%",
+        scrub: 0,
+      };
+
+      gsap.to(span1, {
+        x: -50,
+        scrollTrigger: textScrollTrigger,
+      });
+      gsap.to(span2, {
+        x: 100,
+        scrollTrigger: textScrollTrigger,
+      });
     });
-    gsap.to(span2, {
-      x: 100,
-      scrollTrigger: textScrollTrigger,
+
+    mm.add('(max-width: 768px)', () => {
+      gsap.set(span1, { x: 100 });
+      gsap.set(span2, { x: -100 });
+
+      const textScrollTrigger = {
+        trigger: container,
+        start: "40% 100%",
+        end: "50% 50%",
+        scrub: 0,
+        markers: true,
+      };
+
+      gsap.to(span1, {
+        x: -20,
+        scrollTrigger: textScrollTrigger,
+      });
+      gsap.to(span2, {
+        x: 100,
+        scrollTrigger: textScrollTrigger,
+      });
     });
   });
   return (

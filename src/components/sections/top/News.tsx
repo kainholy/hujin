@@ -30,8 +30,6 @@ export const TopNews = (props: Props) => {
                         src={news.eye_catch.url}
                         alt={news.title}
                         className={styles.img}
-                        width={400}
-                        height={300}
                       />
                     </div>
                     <div className={styles.textArea}>

@@ -95,6 +95,12 @@
 }
 .imgArea {
     width: 41%;
+    aspect-ratio: 535.75 / 804.61;
+    background: url('/top/message/1.png');
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+
     @include sp {
         width: 100%;
     }

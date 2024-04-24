@@ -1,0 +1,82 @@
+@use "../../globals.scss" as *;
+
+.container {
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+  padding-left: min(5.5vw, 8rem);
+  padding-right: min(5.5vw, 8rem);
+  max-width: 144rem;
+  margin: 0 auto;
+}
+.titlearea {
+  margin: 0 30px;
+  text-align: left;
+  display: inline-block;
+}
+
+.title {
+  font-size: 4.5rem; // フォントサイズ
+  font-weight: 700; // フォントウェイト
+  min-height: 6rem; // この値はh1の行の高さに合わせて調整
+  display: block; // h1タグのデフォルトはこれが通常ですが、明示的に設定
+  width: 100%; // 全幅を取るように設定
+  white-space: pre; // 改行やスペースをそのまま保持
+}
+
+.visible {
+  visibility: visible; // テキストが表示されるとこのスタイルが適用される
+}
+
+.redLine {
+  width: 0;
+  height: 6px;
+  background-color: $red;
+  transform-origin: left; // 左端を基準に変形
+  animation: expandLine 2s forwards; // アニメーションを2秒間で一度だけ実行
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; // 最終的には100%の幅に
+  }
+}
+.content {
+  padding-top: 6.4rem;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  padding: 20px;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  //   gap: 1.6rem;
+  width: calc(400 / 1280 * 100%);
+}
+
+.imgArea {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  clip-path: circle(35% at center);
+  object-fit: cover;
+  box-shadow: 5px 5px 20px black;
+}
+.textArea {
+  text-align: center;
+}
+.text {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}

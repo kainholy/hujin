@@ -11,7 +11,7 @@ function Success() {
       </h1>
       <div className={styles.box}>
         <div className={styles.imgarea}>
-          <img src="/hero/2.webp" className={styles.img} />
+          <img src="/contact/1.png" className={styles.img} />
         </div>
         <div className={styles.description}>
           <p>

@@ -13,15 +13,30 @@
     height: 160rem;
     border-radius: 50%;
     border: 4rem solid $red;
+    @include sp {
+        width: 80rem;
+        height: 80rem;
+        top: -15rem;
+    }
 }
 .bgSmallCircle {
     transform: scale(.9);
+    @include sp {
+        transform: scale(.8);
+    }
 }
 .content {
     width: 144rem;
     height: 121.7rem;
     margin-left: calc((144rem - 100%) / -2);
     position: relative;
+    @include sp {
+        width: 100%;
+        // max-width: 50rem;
+        margin: auto;
+        min-height: 110;
+        height: 110rem;
+    }
 }
 .img {
     width: 100%;
@@ -42,7 +57,12 @@
     background: url('/top/gallery/1.webp');
     background-size: 110%;
     background-position-x: center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    @include sp {
+        width: 10rem;
+        height: 10rem;
+        right: calc(80 / 375 * 100%);
+    }
 }
 .secondImgContainer {
     width: 44rem;
@@ -52,7 +72,15 @@
     background: url('/top/gallery/2.webp');
     background-size: 110%;
     background-position-x: center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    @include sp {
+        max-width: calc(44rem * .5);
+        width: calc(220 / 375 * 100%);
+        aspect-ratio: 44 / 31.7;
+        height: auto;
+        top: 2.4 + 20rem;
+        right: calc(20 / 375 * 100%);
+    }
 }
 .thirdImgContainer {
     width: 30.7rem;
@@ -62,7 +90,15 @@
     background: url('/top/gallery/3.webp');
     background-size: 110%;
     background-position-x: center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    @include sp {
+        width: calc(153.5 / 375 * 100%);
+        aspect-ratio: 30.7 / 20.4;
+        height: auto;
+        top: 10rem;
+        // left: 2rem;
+        left: calc(20 / 375 * 100%);
+    }
 }
 .fourthImgContainer {
     width: 96rem;
@@ -72,7 +108,15 @@
     background: url('/top/gallery/4.webp');
     background-size: 110%;
     background-position-x: center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    @include sp {
+        width: calc(480 / 375 * 100%);
+        max-width: 58.2rem;
+        aspect-ratio: 96 / 60;
+        height: auto;
+        top: 48.9 + 24rem;
+        right: -10rem;
+    }
 }
 .fifthImgContainer {
     width: 41rem;
@@ -82,5 +126,13 @@
     background: url('/top/gallery/5.webp');
     background-size: 110%;
     background-position-x: center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    @include sp {
+        width: calc(205 / 375 * 100%);
+        max-width: 21.6rem;
+        aspect-ratio: 41 / 55.6;
+        height: auto;
+        left: 0;
+        top: 35.1 + 6rem;
+    }
 }

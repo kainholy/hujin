@@ -106,22 +106,22 @@
 //     gap: 60px 30px;
 //   }
 // }
-// .fadeUp {
-//   opacity: 0; /* 初期状態では透明に */
-//   animation: fadeIn 1s ease-out forwards;
-// }
+.fadeUp {
+  opacity: 0; /* 初期状態では透明に */
+  animation: fadeIn 1s ease-out forwards;
+}
 
-// @keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//     transform: translateY(100px);
-//   }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
 
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 // .card {
 //   display: grid;
 //   grid-template-rows: subgrid;

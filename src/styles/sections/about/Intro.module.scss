@@ -74,4 +74,13 @@
   max-width: 100%; // 画像がコンテナより大きくならないように制限
   height: auto; // 高さは自動で調整
   border-radius: 10px; // 角丸にする
+  object-fit: cover; // 画像をコンテナに合わせて表示
+}
+@media (max-width: 660px) {
+  .content {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+  }
 }

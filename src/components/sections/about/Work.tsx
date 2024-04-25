@@ -93,6 +93,33 @@ export default function Work() {
             </li>
           </ul>
         </div>
+        {/* 下の段 */}
+        <div className={styles.undcontent}>
+          {/* 左 */}
+          <div className={styles.undimagearea}>
+            <Image
+              className={styles.undimg}
+              src="/about/work/4.png"
+              alt="message"
+              width={500}
+              height={500}
+            />
+          </div>
+          {/* 右 */}
+          <div className={styles.undtext}>
+            <p className={styles.description}>
+              私たち風神は、毎年演舞テーマ、振り付け、曲、衣装までを自ら制作し、毎年違った演舞をお祭りで披露しています。
+              <br />
+              主な活動内容としては，大学内のイベントの活性化を行っています。
+              <br />
+              また，よさこいソーランの楽しさを伝えるため，大学外の各地のお祭りや他大学など，さまざまなイベントに参加しています！
+              <br />
+              演舞依頼が入れば、どこへでも飛んで行きます！
+              <br />
+              よさこいを通して、『みんなに笑顔を届ける』を目標にお祭りに参加しています！
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );

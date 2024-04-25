@@ -6,6 +6,7 @@ import Title from "@/components/sections/about/Title";
 import Intro from "@/components/sections/about/Intro";
 import Work from "@/components/sections/about/Work";
 import Home from "@/components/sections/about/Home";
+import Award from "@/components/sections/about/Award";
 import styles from "@/styles/layout/TopPage.module.scss";
 
 const about = () => {
@@ -18,7 +19,7 @@ const about = () => {
           <Title />
           <Intro />
           <Work />
-          <Home />
+          <Award />
         </div>
       </main>
       <Footer />

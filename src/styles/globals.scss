@@ -14,6 +14,24 @@ $regular: 400;
 $medium: 500;
 $bold: 700;
 
+// opneing
+.--fadeIn {
+    animation-name: fadeInAnime;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+@keyframes fadeInAnime {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+}
+
 // swiper
 #mv .swiper {
     .swiper-slide {
@@ -156,7 +174,7 @@ $bold: 700;
 }
 // 各ページ
 .c-mv-title {
-    font-size: clamp(6rem, 9.72vw,14rem);
+    font-size: clamp(6rem, 9.72vw,500rem);
     font-weight: $bold;
     font-family: $noto;
     line-height: 1.5;

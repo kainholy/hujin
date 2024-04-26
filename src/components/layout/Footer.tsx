@@ -14,13 +14,15 @@ function Footer() {
           <div className={styles.inner}>
             <div className={styles.titleArea}>
               <div className={styles.logo}>
-                <Image
-                  src="/common/logo.png"
-                  alt="風神部ロゴ"
-                  className={styles.img}
-                  width={200}
-                  height={200}
-                />
+                <Link href="/">
+                  <Image
+                    src="/common/logo.png"
+                    alt="風神部ロゴ"
+                    className={styles.img}
+                    width={200}
+                    height={200}
+                  />
+                </Link>
               </div>
               <p className={styles.title + ' c-footer-title'}>千葉工業大学 よさこいソーラン風神部</p>
             </div>

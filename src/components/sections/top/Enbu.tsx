@@ -46,9 +46,9 @@ function Enbu() {
             slidesPerView={"auto"} // ハイドレーションエラー対策
             centeredSlides={true} // スライドを中央に配置
             loop={true} // スライドをループさせる
-            speed={1500} // スライドが切り替わる時の速度
+            speed={1000} // スライドが切り替わる時の速度
             autoplay={{
-              delay: 10000,
+              delay: 5000,
               disableOnInteraction: false,
             }} // スライド表示時間
             navigation // ナビゲーション（左右の矢印）

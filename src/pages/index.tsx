@@ -14,6 +14,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import { client } from "../../libs/client";
+import { useEffect, useState } from "react";
+import Loading from "@/components/sections/top/Loading";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -26,6 +28,13 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 const Home: NextPage<Props> = ({ news }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+  }, [])
   return (
     <>
       <Head>
@@ -34,20 +43,25 @@ const Home: NextPage<Props> = ({ news }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Header />
-      <main>
-        <div className={styles.container}>
-          <Mv />
-          <Gallery />
-          <Message />
-          <Circle />
-          <Enbu />
-          <TopNews news={news} />
-          <Sns />
-          <We />
-        </div>
-      </main>
-      <Footer />
+      <div className={styles.top}>
+        {isLoading && (
+            <Loading />
+        )}
+        <Header />
+        <main>
+          <div className={styles.container}>
+            <Mv />
+            <Gallery />
+            <Message />
+            <Circle />
+            <Enbu />
+            <TopNews news={news} />
+            <Sns />
+            <We />
+          </div>
+        </main>
+        <Footer />
+      </div>
     </>
   );
 };

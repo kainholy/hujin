@@ -20,6 +20,7 @@ $bold: 700;
     animation-duration: 0.5s;
     animation-delay: 3s;
     animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
     opacity: 1;
 }
 @keyframes fadeInAnime {

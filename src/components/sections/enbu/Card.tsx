@@ -53,6 +53,7 @@ const Card = () => {
           data-startcolor={enbu.startColor}
           data-endcolor={enbu.endColor}
           className={styles.card}
+          id={enbu.year}
         >
           <div className={styles.titlearea}>
             <h1 className={styles.title}>

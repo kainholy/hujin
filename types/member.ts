@@ -10,9 +10,12 @@ export type Member = {
   fieldId: "member";
   img: Image;
   name: string;
-  song: string;
-  holiday: string;
-  celebrity: string;
+  cont1: string;
+  desc1: string;
+  cont2: string;
+  desc2: string;
+  cont3: string;
+  desc3: string;
   comment: string;
 };
 

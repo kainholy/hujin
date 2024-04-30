@@ -19,17 +19,17 @@ const Member = ({ member }: Props) => {
             <div className={styles.content}>
               <h1>{member.name}</h1>
               <p>
-                <span>好きなよさこいソング</span>
+                <span>{member.cont1}</span>
                 <br />
-                {member.song}
+                {member.desc1}
                 <br />
-                <span>休日の過ごし方</span>
+                <span>{member.cont2}</span>
                 <br />
-                {member.holiday}
+                {member.desc2}
                 <br />
-                <span>好きな有名人</span>
+                <span>{member.cont3}</span>
                 <br />
-                {member.celebrity}
+                {member.desc3}
                 <br />
                 <span>ひとこと</span>
                 <br />

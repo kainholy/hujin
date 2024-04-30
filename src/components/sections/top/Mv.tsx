@@ -12,10 +12,12 @@ gsap.registerPlugin(ScrollTrigger)
 
 const images = [
   "/top/mv/1.webp",
-  "/top/mv/2.webp",
   "/top/mv/3.webp",
   "/top/mv/4.webp",
+  "/top/mv/2.webp",
   "/top/mv/5.webp",
+  "/top/mv/6.webp",
+  "/top/mv/7.webp",
 ];
 
 function Mv() {

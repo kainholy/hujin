@@ -4,7 +4,7 @@
   width: 100%;
   height: auto;
   background: url("/bg.webp");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
   object-fit: cover;
@@ -19,7 +19,7 @@
   border-radius: 20px;
   width: 100%; // Adjusted to be responsive
   max-width: 1080px; // Added max-width to limit container size
-  margin: 40px auto;
+  margin: 0 auto;
   padding: 40px 0;
   font-family: $noto;
 }

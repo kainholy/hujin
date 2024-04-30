@@ -6,6 +6,8 @@ import React from "react";
 import NewsListItem from "@/components/sections/news/NewsListItem"; // 新しく追加
 import Hero from "@/components/sections/hero/Hero"; // 新しく追加
 import styles from "@/styles/layout/TopPage.module.scss";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -20,10 +22,14 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const NewsList: NextPage<Props> = ({ news }) => {
   return (
-    <div className={styles.container}>
-      <Hero />
-      <NewsListItem news={news} />
-    </div>
+    <>
+      <Header />
+      <main className={styles.container}>
+        <Hero />
+        <NewsListItem news={news} />
+      </main>
+      <Footer />
+    </>
   );
 };
 

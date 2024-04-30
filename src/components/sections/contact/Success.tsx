@@ -26,7 +26,7 @@ function Success() {
             何かご不明点がございましたら、以下の連絡先までお気軽にお問い合わせください。
             <br />
           </p>
-          <p>メール: support@example.com</p>
+          <p>メール: fuujinweb@gmail.com</p>
         </div>
       </div>
 

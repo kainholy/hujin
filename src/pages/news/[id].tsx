@@ -3,6 +3,8 @@ import { client } from "../../../libs/client";
 import styles from "@/styles/sections/news/NewsArticle.module.scss";
 import Hero from "@/components/sections/hero/Hero";
 import Link from "next/link";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 type Props = {
   news: News;
@@ -33,32 +35,36 @@ export const getStaticProps = async (context: any) => {
 
 export default function NewsPage({ news }: Props) {
   return (
-    <section className={styles.section}>
-      <Hero />
-      <div className={styles.container}>
-        <div className={styles.title}>
-          <h1>{news.title}</h1>
-        </div>
-
-        <div>
-          <div className={styles.imgarea}>
-            <img src={news.eye_catch.url} alt="news" className={styles.img} />
+    <>
+      <Header />
+      <section className={styles.section}>
+        <Hero />
+        <div className={styles.container}>
+          <div className={styles.title}>
+            <h1>{news.title}</h1>
           </div>
 
-          <div className={styles.textarea}>
-            <div
-              className={styles.text}
-              dangerouslySetInnerHTML={{ __html: `${news.body}` }}
-            ></div>
+          <div>
+            <div className={styles.imgarea}>
+              <img src={news.eye_catch.url} alt="news" className={styles.img} />
+            </div>
+
+            <div className={styles.textarea}>
+              <div
+                className={styles.text}
+                dangerouslySetInnerHTML={{ __html: `${news.body}` }}
+              ></div>
+            </div>
+          </div>
+
+          <div>
+            <Link href="/news">
+              <button className={styles.button}>一覧に戻る</button>
+            </Link>
           </div>
         </div>
-
-        <div>
-          <Link href="/news">
-            <button className={styles.button}>一覧に戻る</button>
-          </Link>
-        </div>
-      </div>
-    </section>
+      </section>
+      <Footer />
+    </>
   );
 }
